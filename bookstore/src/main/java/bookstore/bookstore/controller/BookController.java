@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/book")
-@CrossOrigin(origins = "*")
 public class BookController {
 
     @Autowired
     private BookService bookService;
 
     @GetMapping
+    @CrossOrigin
     public ResponseEntity<?> findAll(){
         return ResponseEntity.ok(bookService.findAll());
     }

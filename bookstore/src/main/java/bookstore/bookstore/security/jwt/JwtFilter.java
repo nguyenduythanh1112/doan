@@ -24,14 +24,14 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
-        response.setHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,"*");
-        response.setHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS,"Authorization, Content-Type, Access-Control-Allow-Headers, X-Request-With");
-        response.setHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS,"POST,PUT,GET,DELETE,POST,OPTIONS");
-        response.setHeader(HttpHeaders.CACHE_CONTROL,"no-cache, no-store, must-revalidate");
-        response.setHeader(HttpHeaders.PRAGMA,"no-cache");
-        response.setHeader(HttpHeaders.EXPIRES,"0");
-        response.setHeader(HttpHeaders.ACCESS_CONTROL_MAX_AGE,"3600");
-        response.setStatus(HttpServletResponse.SC_OK);
+//        response.setHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,"*");
+//        response.setHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS,"Authorization, Content-Type, Access-Control-Allow-Headers, X-Request-With");
+//        response.setHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS,"POST,PUT,GET,DELETE,POST,OPTIONS");
+//        response.setHeader(HttpHeaders.CACHE_CONTROL,"no-cache, no-store, must-revalidate");
+//        response.setHeader(HttpHeaders.PRAGMA,"no-cache");
+//        response.setHeader(HttpHeaders.EXPIRES,"0");
+//        response.setHeader(HttpHeaders.ACCESS_CONTROL_MAX_AGE,"3600");
+//        response.setStatus(HttpServletResponse.SC_OK);
 
         String token=request.getHeader("Authorization");
         System.out.println(token);
