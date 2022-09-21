@@ -39,6 +39,7 @@ public class Config extends WebSecurityConfigurerAdapter {
         http
             .csrf()
             .disable()
+//            .cors().disable()
             .authorizeRequests()
             .antMatchers("/login").permitAll()
             .anyRequest().authenticated().and()
